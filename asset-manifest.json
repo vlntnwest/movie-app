@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movie-app/static/css/main.197978ef.css",
-    "main.js": "/movie-app/static/js/main.e91c78f3.js",
+    "main.js": "/movie-app/static/js/main.00499a2a.js",
     "static/media/Dongle-Regular.ttf": "/movie-app/static/media/Dongle-Regular.be19c2ab1576230dd28d.ttf",
     "static/media/Dongle-Light.ttf": "/movie-app/static/media/Dongle-Light.099c1b232ee32aedbc6d.ttf",
     "index.html": "/movie-app/index.html",
     "main.197978ef.css.map": "/movie-app/static/css/main.197978ef.css.map",
-    "main.e91c78f3.js.map": "/movie-app/static/js/main.e91c78f3.js.map"
+    "main.00499a2a.js.map": "/movie-app/static/js/main.00499a2a.js.map"
   },
   "entrypoints": [
     "static/css/main.197978ef.css",
-    "static/js/main.e91c78f3.js"
+    "static/js/main.00499a2a.js"
   ]
 }
