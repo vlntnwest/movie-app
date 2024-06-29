@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/movie-app/static/css/main.197978ef.css",
-    "main.js": "/movie-app/static/js/main.5edf8c5e.js",
-    "static/media/Dongle-Regular.ttf": "/movie-app/static/media/Dongle-Regular.be19c2ab1576230dd28d.ttf",
-    "static/media/Dongle-Light.ttf": "/movie-app/static/media/Dongle-Light.099c1b232ee32aedbc6d.ttf",
+    "main.css": "/movie-app/static/css/main.35bf8a82.css",
+    "main.js": "/movie-app/static/js/main.ee1f4d7a.js",
+    "static/media/Poppins-Regular.ttf": "/movie-app/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/movie-app/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "index.html": "/movie-app/index.html",
-    "main.197978ef.css.map": "/movie-app/static/css/main.197978ef.css.map",
-    "main.5edf8c5e.js.map": "/movie-app/static/js/main.5edf8c5e.js.map"
+    "main.35bf8a82.css.map": "/movie-app/static/css/main.35bf8a82.css.map",
+    "main.ee1f4d7a.js.map": "/movie-app/static/js/main.ee1f4d7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.197978ef.css",
-    "static/js/main.5edf8c5e.js"
+    "static/css/main.35bf8a82.css",
+    "static/js/main.ee1f4d7a.js"
   ]
 }

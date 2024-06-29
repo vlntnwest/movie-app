@@ -1,20 +1,22 @@
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/Dongle-Regular.ttf);
+  src: url(../assets/fonts/Poppins-Medium.ttf);
 }
 @font-face {
   font-family: "font-2";
-  src: url(../assets/fonts/Dongle-Light.ttf);
+  src: url(../assets/fonts/Poppins-Regular.ttf);
 }
 
 $font-1: "font-1", sans-serif;
 $font-2: "font-2", sans-serif;
 
-$color-1: #546fe4;
-$color-2: #212040;
+$color-1: #e50914;
+$color-2: #141414;
 $color-3: rgb(100, 100, 100);
-$black: #060d2c;
-$white: rgb(238, 238, 238);
+$black: #000000bf;
+$white: #fff;
+$white2: #e5e5e5;
+$grey: #b3b3b3;
 
 * {
   margin: 0;
@@ -30,8 +32,6 @@ body {
 li {
   list-style: none;
 }
-.result {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+a {
+  text-decoration: none;
 }

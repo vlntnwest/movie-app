@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { TiStarFullOutline } from "react-icons/ti";
+import { FaRegBookmark } from "react-icons/fa6";
+import { FaBookmark } from "react-icons/fa6";
 
 const Card = ({ movie, onDelete }) => {
   const [genreData, setGenreData] = useState([]);
@@ -27,7 +30,7 @@ const Card = ({ movie, onDelete }) => {
   const dateFormater = (date) => {
     let newDate = new Date(date).toLocaleDateString("fr-FR", {
       year: "numeric",
-      month: "long",
+      month: "numeric",
       day: "numeric",
     });
     return newDate;
@@ -63,42 +66,55 @@ const Card = ({ movie, onDelete }) => {
   };
 
   return (
-    <li className="card">
-      <img
-        src={
-          movie.poster_path
-            ? "https://image.tmdb.org/t/p/original/" + movie.poster_path
-            : "/movie-app/img/poster.jpg"
-        }
-        alt={"Affiche " + movie.title}
-      />
-      <h2>{movie.title}</h2>
-      <h5>Sorti le : {formattedDate}</h5>
-      <h4>{movie.vote_average}/10</h4>
-      <ul className="tag">
-        {movie.genre_ids
-          ? movie.genre_ids.map((id) => (
-              <li key={id}>{getGenreNameById(id)}</li>
-            ))
-          : movie.genres.map((genre) => <li key={genre.name}>{genre.name}</li>)}
-      </ul>
-      {movie.overview ? <h3>Synopsis</h3> : ""}
-      <p>{movie.overview}</p>
-      {isFavorite ? (
-        <div
-          className="btn"
-          onClick={() => {
-            deleteStorage();
-          }}
-        >
-          Supprimer de la liste
+    <div className="card-wrapper">
+      <li className="card">
+        <div className="img-container">
+          <img
+            src={
+              movie.poster_path
+                ? "https://image.tmdb.org/t/p/original/" + movie.poster_path
+                : "/movie-app/img/poster.jpg"
+            }
+            alt={"Affiche " + movie.title}
+          />
         </div>
-      ) : (
-        <div className="btn" onClick={() => addStorage()}>
-          Ajouter aux coups de coeur
+        <div className="content-wrapper">
+          <div className="content">
+            <h2>{movie.title}</h2>
+            <div className="infos">
+              <TiStarFullOutline />
+              <h5>{movie.vote_average.toFixed(2)}/10</h5>
+              <h5>|</h5>
+              <h5>{formattedDate}</h5>
+            </div>
+            <ul className="tag">
+              {movie.genre_ids
+                ? movie.genre_ids.map((id) => (
+                    <li key={id}>{getGenreNameById(id)}</li>
+                  ))
+                : movie.genres.map((genre) => (
+                    <li key={genre.name}>{genre.name}</li>
+                  ))}
+            </ul>
+            <p>{movie.overview}</p>
+            {isFavorite ? (
+              <div
+                className="btn"
+                onClick={() => {
+                  deleteStorage();
+                }}
+              >
+                <FaBookmark />
+              </div>
+            ) : (
+              <div className="btn" onClick={() => addStorage()}>
+                <FaRegBookmark />
+              </div>
+            )}
+          </div>{" "}
         </div>
-      )}
-    </li>
+      </li>
+    </div>
   );
 };
 

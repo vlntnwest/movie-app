@@ -17,7 +17,7 @@ const Navigation = () => {
             to="/favoris"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
-            <li>Coups de coeurs</li>
+            <li>Favoris</li>
           </NavLink>
         </ul>
       </nav>

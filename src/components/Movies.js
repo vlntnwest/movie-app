@@ -36,31 +36,29 @@ const Movies = () => {
 
   return (
     <div className="movies">
-      <div className="form-component">
-        <div className="form-container">
-          <form onSubmit={(e) => handleSubmit(e)}>
-            <input
-              type="text"
-              name="search"
-              placeholder="Entrez le titre d'un film"
-            />
-            <input type="submit" value="Rechercher" />
-          </form>
-        </div>
+      <div className="results-header">
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            type="text"
+            name="search"
+            placeholder="Entrez le titre d'un film"
+          />
+          <input type="submit" />
+        </form>
         <div className="btn-sort-container">
           <div
             className="btn-sort"
             id="goodToBad"
             onClick={() => setSortGoodBad("goodToBad")}
           >
-            Top<span>➜</span>
+            <div>➜</div>Top
           </div>
           <div
             className="btn-sort"
             id="badToGood"
             onClick={() => setSortGoodBad("badToGood")}
           >
-            Flop<span>➜</span>
+            <div>➜</div>Flop
           </div>
         </div>
       </div>

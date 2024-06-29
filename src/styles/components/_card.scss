@@ -1,108 +1,109 @@
-.card {
-  flex: 1 0 25%;
-  min-width: 260px;
-  max-width: 280px;
-  height: 620px;
-  background: #060d2c;
-  border-radius: 35px;
-  margin: 5px;
-  padding: 26px 15px 30px;
-  position: relative;
-  overflow: hidden;
-
+.result {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 8px;
+  padding: 0 4%;
+  justify-items: center;
+  margin-bottom: 60px;
   &::after {
     content: "";
-    position: absolute;
-    height: 90px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(195, 34, 34, 0) 0%, $black 55%);
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    border-radius: 0 0 30px 30px;
+    flex: auto;
+    margin: 0; /* Ajustement pour éviter toute erreur de syntaxe */
   }
 
-  img {
-    width: 80%;
-    height: 254px;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50px;
-    box-shadow: 0 8px 1px rgba(255, 255, 255, 0.1),
-      0 16px 1px rgba(255, 255, 255, 0.05);
-  }
-  h2 {
-    margin: 24px 0 0px;
-    letter-spacing: 1px;
-    line-height: 20px;
-  }
-  h5 {
-    color: $color-3;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-  h4 {
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    margin-top: -4px;
-
-    span {
-      font-size: 0.7rem;
-    }
-  }
-  ul {
-    margin: 6px 0;
+  .card-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
   }
-  li {
-    background: #212040;
-    border-radius: 18px;
-    padding: 0px 7px;
-    margin: 0 4px 4px 0;
-    font-size: 1.1rem;
 
-    &:first-child {
-      margin-left: -4px;
+  .card {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    &:hover img {
+      transform: scale(1.05);
     }
-  }
-  h3 {
-    letter-spacing: 1px;
-    font-size: 1.4rem;
-    margin-top: 10px;
-  }
-  p {
-    color: $color-3;
-    font-size: 1.3rem;
-    line-height: 20px;
-    height: 160px;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      display: none;
+    &:hover .content-wrapper {
+      opacity: 1;
     }
-  }
-  .btn {
-    background: #546fe4;
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 14px 0;
-    width: 150px;
-    text-align: center;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.2s;
-    z-index: 50;
 
-    &:hover {
-      background: #212040;
-      box-shadow: 0 0 10px #546ee4d2;
-      font-size: 1.025rem;
+    .img-container {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: 0.4s ease-in-out;
+        user-select: none;
+      }
+    }
+    .content-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.2), #000000d7);
+      opacity: 0;
+      transition: 0.4s ease-in-out;
+      border-radius: 8px;
+      .content {
+        position: absolute;
+        bottom: 4%;
+        width: 100%;
+        padding: 0 4%;
+        transition: all 0.5s;
+
+        h2 {
+          margin: 24px 0 0px;
+          letter-spacing: 1px;
+          line-height: 20px;
+          font-size: 18px;
+        }
+        .infos {
+          display: flex;
+          h5 {
+            letter-spacing: 1px;
+            font-size: 12px;
+            vertical-align: baseline;
+            margin-right: 8px;
+          }
+        }
+        ul {
+          margin: 8px 0;
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            background: $white;
+            color: $black;
+            border-radius: 4px;
+            padding: 0px 7px;
+            margin: 0 4px 4px 0;
+            font-size: 12px;
+          }
+        }
+        p {
+          font-size: 12px;
+          height: 160px;
+          overflow-y: scroll;
+          margin-bottom: 8px;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+        .btn {
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
     }
   }
 }

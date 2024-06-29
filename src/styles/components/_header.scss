@@ -1,40 +1,32 @@
 .header {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 4%;
   h1 {
-    font-size: 3.3rem;
-    text-shadow: 2px 3px 0px $color-1;
+    font-size: 1.5rem;
+    color: $color-1;
     text-align: center;
-    letter-spacing: 2px;
+    text-transform: uppercase;
   }
   nav {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    font-size: 1.3rem;
+    font-size: 0.7rem;
 
     ul {
       display: flex;
 
       a {
-        text-decoration: none;
-        color: $white;
-        border-radius: 10px;
-        width: 102px;
+        margin-left: 18px;
+        color: $white2;
         text-align: center;
-        margin-right: 5px;
-
-        &:visited {
-          text-decoration: none;
+        &:hover {
+          color: $grey;
+        }
+        &.nav-active {
           color: $white;
-        }
-        &:hover {
-          background: $black;
-        }
-      }
-      a.nav-active {
-        background: $color-1;
-
-        &:hover {
-          background: $black;
+          &:hover {
+            cursor: default;
+          }
         }
       }
     }
